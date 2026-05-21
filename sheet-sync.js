@@ -113,7 +113,7 @@
     card.dataset.kit      = p.kit  || "sin-kit";
 
     card.innerHTML =
-      '<div class="card__media">' + mediaHTML + '</div>' +
+      '<div class="card__media" data-kit="' + (p.kit || '') + '">' + mediaHTML + '</div>' +
       '<div class="card__body">' +
         '<div class="card__top">' +
           '<h3 class="card__name">' + p.rawName + '</h3>' +

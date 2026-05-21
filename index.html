@@ -16,7 +16,6 @@
     <a class="nav__logo" href="#inicio">H8Store<span>®</span></a>
     <nav class="nav__links">
       <a href="#catalogo">Catálogo</a>
-      <a href="#destacado">Destacado</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
@@ -71,7 +70,7 @@
           <span class="filter-label">Selección</span>
           <button type="button" class="chip is-active" data-cat="todos">Todos</button>
         </div>
-        <div class="filter-row" data-filter-tipos>
+        <div class="filter-row filter-row--tipos" data-filter-tipos>
           <span class="filter-label">Tipo</span>
           <button type="button" class="chip is-active" data-tipo="todos">Todos</button>
           <button type="button" class="chip" data-tipo="player">Player</button>
@@ -99,37 +98,6 @@
         <p class="grid-empty" data-grid-empty hidden>
           No hay piezas para esta combinación de selección y talla.
         </p>
-      </div>
-    </section>
-
-    <div class="rule" aria-hidden="true"></div>
-
-    <section class="featured" id="destacado">
-      <div class="featured__media reveal">
-        <div class="featured__glow" aria-hidden="true"></div>
-        <img class="featured__img" src="assets/featured-jersey.png"
-             alt="Camiseta destacada"
-             onerror="this.classList.add('is-empty')" />
-      </div>
-      <div class="featured__info reveal">
-        <p class="kicker">Pieza destacada</p>
-        <h2 class="featured__name">Edición<br />Aniversario</h2>
-        <p class="featured__price">€25,00</p>
-        <div class="featured__sizes">
-          <p class="featured__label">Tallas disponibles</p>
-          <div class="size-select" data-size-select>
-            <button type="button" class="size-btn is-active">S</button>
-            <button type="button" class="size-btn">M</button>
-            <button type="button" class="size-btn">L</button>
-            <button type="button" class="size-btn">XL</button>
-          </div>
-        </div>
-        <p class="featured__desc">
-          Tejido técnico de doble capa con acabado mate. Bordado en relieve,
-          cuello reforzado y corte atlético. Stock real, actualizado en tiempo real
-          desde nuestro inventario.
-        </p>
-        <a class="btn btn--solid" href="#contacto">Consultar disponibilidad</a>
       </div>
     </section>
 
