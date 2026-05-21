@@ -113,17 +113,17 @@
     card.dataset.kit      = p.kit  || "sin-kit";
 
     card.innerHTML =
-      '<div class="card__media" data-kit="' + (p.kit || '') + '">' + mediaHTML + '</div>' +
+      '<div class="card__media">' +
+        '<span class="card__kit-badge">' + (p.kit || '') + '</span>' +
+        mediaHTML +
+      '</div>' +
       '<div class="card__body">' +
-        '<div class="card__top">' +
-          '<h3 class="card__name">' + p.rawName + '</h3>' +
+        '<div class="card__country">' + p.country + '</div>' +
+        '<div class="card__name">' + (p.talla ? p.talla : '') + (p.talla && p.tipo ? ' &middot; ' : '') + (p.tipo ? p.tipo : '') + '</div>' +
+        '<div class="card__footer">' +
+          '<span class="card__price">' + p.price + '</span>' +
           '<span class="stock stock--in">Disponible</span>' +
         '</div>' +
-        '<div class="sizes">' +
-          (p.talla ? '<span class="size">' + p.talla + '</span>' : '') +
-          (p.tipo  ? '<span class="size" style="color:var(--muted);font-size:.65rem">' + p.tipo + '</span>' : '') +
-        '</div>' +
-        '<p class="card__price">' + p.price + '</p>' +
       '</div>';
 
     return card;

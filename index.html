@@ -65,25 +65,30 @@
       </header>
 
       <div class="filters">
-        <div class="filter-row" data-filter-categories>
-          <span class="filter-label">Selección</span>
-          <button type="button" class="chip is-active" data-cat="todos">Todos</button>
+        <!-- Selección: tabs horizontales grandes -->
+        <div class="filter-countries" data-filter-categories>
+          <button type="button" class="country-tab is-active" data-cat="todos">Todos</button>
         </div>
-        <div class="filter-row filter-row--tipos" data-filter-tipos>
-          <span class="filter-label">Tipo</span>
-          <button type="button" class="chip is-active" data-tipo="todos">Todos</button>
-          <button type="button" class="chip" data-tipo="player">Player</button>
-          <button type="button" class="chip" data-tipo="fan">Fan</button>
-        </div>
-        <div class="filter-row" data-filter-kits>
-          <span class="filter-label">Equipación</span>
-          <button type="button" class="chip is-active" data-kit="todos">Todas</button>
-          <button type="button" class="chip" data-kit="local">Local</button>
-          <button type="button" class="chip" data-kit="visitante">Visitante</button>
-        </div>
-        <div class="filter-row filter-row--sizes" data-filter-sizes>
-          <span class="filter-label">Talla</span>
-          <button type="button" class="chip is-active" data-size="todas">Todas</button>
+        <!-- Controles secundarios -->
+        <div class="filter-secondary">
+          <div class="filter-group" data-filter-tipos>
+            <span class="filter-label">Tipo</span>
+            <button type="button" class="chip is-active" data-tipo="todos">Todos</button>
+            <button type="button" class="chip" data-tipo="player">Player</button>
+            <button type="button" class="chip" data-tipo="fan">Fan</button>
+          </div>
+          <span class="filter-sep"></span>
+          <div class="filter-group" data-filter-kits>
+            <span class="filter-label">Equipación</span>
+            <button type="button" class="chip is-active" data-kit="todos">Todas</button>
+            <button type="button" class="chip" data-kit="local">Local</button>
+            <button type="button" class="chip" data-kit="visitante">Visitante</button>
+          </div>
+          <span class="filter-sep"></span>
+          <div class="filter-group filter-row--sizes" data-filter-sizes>
+            <span class="filter-label">Talla</span>
+            <button type="button" class="chip is-active" data-size="todas">Todas</button>
+          </div>
         </div>
       </div>
 

@@ -126,7 +126,7 @@
     }
 
     function setActive(row, btn) {
-      row.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("is-active"); });
+      row.querySelectorAll(".chip, .country-tab").forEach(function (c) { c.classList.remove("is-active"); });
       btn.classList.add("is-active");
     }
     function resetSizeChips() {
