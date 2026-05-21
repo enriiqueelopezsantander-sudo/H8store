@@ -208,7 +208,7 @@
         return r.arrayBuffer();
       })
       .then(function(buffer) {
-        var text = new TextDecoder('iso-8859-1').decode(buffer);
+        var text = new TextDecoder('utf-8').decode(buffer);
         render(parseCSV(text));
       })
       .catch(function(err) {
