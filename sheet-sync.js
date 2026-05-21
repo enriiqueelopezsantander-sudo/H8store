@@ -145,7 +145,7 @@
       var label = products.find(function(p){ return p.catKey === key; }).country;
       var btn   = document.createElement("button");
       btn.type  = "button";
-      btn.className   = "chip";
+      btn.className   = "country-tab";
       btn.dataset.cat = key;
       btn.textContent = label;
       catRow.appendChild(btn);
