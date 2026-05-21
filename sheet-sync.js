@@ -78,7 +78,8 @@
       /* Country = rawName minus trailing digit */
       var country = rawName.replace(/\s*\d+\s*$/, "").trim();
       var catKey  = normalizeKey(country);
-      var kit     = normalizeKey(parts[3] || ""); // "local" | "visitante" | ""
+      var kit     = normalizeKey(parts[3] || "");
+      var imgUrl  = (cols[6] || "").trim(); // columna G = URL imagen
 
       products.push({
         rawName  : rawName,
@@ -87,7 +88,8 @@
         talla    : talla,
         tipo     : tipo,
         price    : pventa ? pventa + " €" : "—",
-        kit      : kit
+        kit      : kit,
+        imgUrl   : imgUrl
       });
     });
 
@@ -97,7 +99,10 @@
   /* ── Build one card element ──────────────────────────── */
   function buildCard(p, idx) {
     var imgKey = normalizeKey(p.country) + (p.kit ? "_" + p.kit : "");
-    var imgSrc = IMG[imgKey] || IMG[normalizeKey(p.country) + "_local"] || IMG[normalizeKey(p.country) + "_visitante"];
+    var imgSrc = p.imgUrl
+      || IMG[imgKey]
+      || IMG[normalizeKey(p.country) + "_local"]
+      || IMG[normalizeKey(p.country) + "_visitante"];
     var emoji  = FLAG[imgKey] || "⚽";
 
     var mediaHTML = imgSrc
