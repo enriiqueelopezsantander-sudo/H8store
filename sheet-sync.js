@@ -205,9 +205,12 @@
     fetch(CSV_URL)
       .then(function(r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
-        return r.text();
+        return r.arrayBuffer();
       })
-      .then(function(text) { render(parseCSV(text)); })
+      .then(function(buffer) {
+        var text = new TextDecoder('iso-8859-1').decode(buffer);
+        render(parseCSV(text));
+      })
       .catch(function(err) {
         console.error("[sheet-sync]", err);
         var loading = document.getElementById("sheet-loading");
