@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H8Store — Catálogo de camisetas de fútbol</title>
+  <meta name="description" content="H8Store — Camisetas de fútbol premium. Consulta el stock disponible por categoría y talla." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260519g" />
+</head>
+<body>
+
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#inicio">H8Store<span>®</span></a>
+    <nav class="nav__links">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#destacado">Destacado</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="hero__sticky">
+        <div class="hero__light" aria-hidden="true">
+          <span class="hero__beam"></span>
+        </div>
+        <div class="hero__media">
+          <video class="hero__video" muted playsinline preload="auto" poster="">
+            <source src="assets/hero-jersey.mp4?v=20260519g" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero__overlay" data-hero-overlay>
+          <p class="hero__kicker">Temporada 2026 · Edición limitada</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Dentro</span></span>
+            <span class="line"><span>del juego</span></span>
+          </h1>
+          <p class="hero__sub">
+            Camisetas de fútbol de autor. Consulta el stock disponible
+            por categoría y talla.
+          </p>
+          <a class="btn" href="#catalogo">Ver catálogo</a>
+        </div>
+        <div class="hero__scroll" data-hero-scroll aria-hidden="true">
+          <span>Desliza</span><i></i>
+        </div>
+        <div class="hero__progress" aria-hidden="true">
+          <span data-hero-progress></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section class="catalog" id="catalogo">
+      <header class="section-head reveal">
+        <p class="kicker">El catálogo</p>
+        <h2 class="section-title">Colección 2026</h2>
+        <p class="section-lead">
+          Elige una selección y, después, tu talla. La disponibilidad
+          que ves es stock real.
+        </p>
+      </header>
+
+      <div class="filters">
+        <div class="filter-row" data-filter-categories>
+          <span class="filter-label">Selección</span>
+          <button type="button" class="chip is-active" data-cat="todos">Todos</button>
+        </div>
+        <div class="filter-row" data-filter-tipos>
+          <span class="filter-label">Tipo</span>
+          <button type="button" class="chip is-active" data-tipo="todos">Todos</button>
+          <button type="button" class="chip" data-tipo="player">Player</button>
+          <button type="button" class="chip" data-tipo="fan">Fan</button>
+        </div>
+        <div class="filter-row" data-filter-kits>
+          <span class="filter-label">Equipación</span>
+          <button type="button" class="chip is-active" data-kit="todos">Todas</button>
+          <button type="button" class="chip" data-kit="local">Local</button>
+          <button type="button" class="chip" data-kit="visitante">Visitante</button>
+        </div>
+        <div class="filter-row filter-row--sizes" data-filter-sizes>
+          <span class="filter-label">Talla</span>
+          <button type="button" class="chip is-active" data-size="todas">Todas</button>
+        </div>
+      </div>
+
+      <p class="results-count" data-results-count>Cargando…</p>
+
+      <div class="grid" data-grid>
+        <!-- Cards injected by sheet-sync.js -->
+        <div id="sheet-loading" style="grid-column:1/-1;text-align:center;padding:4rem;color:var(--muted);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;">
+          Cargando inventario…
+        </div>
+        <p class="grid-empty" data-grid-empty hidden>
+          No hay piezas para esta combinación de selección y talla.
+        </p>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section class="featured" id="destacado">
+      <div class="featured__media reveal">
+        <div class="featured__glow" aria-hidden="true"></div>
+        <img class="featured__img" src="assets/featured-jersey.png"
+             alt="Camiseta destacada"
+             onerror="this.classList.add('is-empty')" />
+      </div>
+      <div class="featured__info reveal">
+        <p class="kicker">Pieza destacada</p>
+        <h2 class="featured__name">Edición<br />Aniversario</h2>
+        <p class="featured__price">€25,00</p>
+        <div class="featured__sizes">
+          <p class="featured__label">Tallas disponibles</p>
+          <div class="size-select" data-size-select>
+            <button type="button" class="size-btn is-active">S</button>
+            <button type="button" class="size-btn">M</button>
+            <button type="button" class="size-btn">L</button>
+            <button type="button" class="size-btn">XL</button>
+          </div>
+        </div>
+        <p class="featured__desc">
+          Tejido técnico de doble capa con acabado mate. Bordado en relieve,
+          cuello reforzado y corte atlético. Stock real, actualizado en tiempo real
+          desde nuestro inventario.
+        </p>
+        <a class="btn btn--solid" href="#contacto">Consultar disponibilidad</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="footer__inner reveal">
+      <a class="footer__logo" href="#inicio">H8Store<span>®</span></a>
+      <div class="footer__contact">
+        <p><a href="tel:+34652028746">+34 652 02 87 46</a></p>
+      </div>
+      <div class="footer__social">
+        <a href="https://instagram.com/H8sotre_" target="_blank" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <p class="footer__legal">© 2026 H8Store. Catálogo informativo · Consulta disponibilidad por contacto.</p>
+  </footer>
+
+  <script defer src="sheet-sync.js?v=20260519g"></script>
+  <script defer src="main.js?v=20260519g"></script>
+</body>
+</html>

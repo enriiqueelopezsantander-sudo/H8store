@@ -1,0 +1,17 @@
+# MAGLIA — cache strategy for Hostinger / Apache hosts
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|mjs|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpg|jpeg|png|svg|gif|mp4|woff|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType video/mp4 .mp4
+</IfModule>
+
+# Serve index.html at the root
+DirectoryIndex index.html
