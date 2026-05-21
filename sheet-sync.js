@@ -25,11 +25,11 @@
     espana_visitante:   "assets/espana_visitante.webp",
     colombia_local:     "assets/colombia_local.webp",
     colombia_visitante: "assets/colombia_visitante.jpg",
-    portugal_visitante: "assets/portugal_visitante.webp",
-    argentina_local:    "assets/argentina_local.jpg",
-    argentina_visitante:"assets/argentina_visitante.webp",
-    brasil_visitante:   "assets/brasil_visitante.jpg",
-    ghana_local:        "assets/ghana_local.webp"
+    portugal_visitante: "assets/Portugal_visitante.webp",
+    argentina_local:    "assets/Argentina_local.jpg",
+    argentina_visitante:"assets/Argentina_visitante.webp",
+    brasil_visitante:   "assets/Brasil_visitante.jpg",
+    ghana_local:        "assets/Ghana_local.webp"
   };
 
   /* ── Normalize accent/case for keys ─────────────────── */
